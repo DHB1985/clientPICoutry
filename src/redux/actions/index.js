@@ -10,7 +10,7 @@ import {
 
 export const getCountries = () => {
   return async (dispatch) => {
-    let allCountries = await axios.get("https://apipicountryv00.herokuapp.com/countries");
+    let allCountries = await axios.get("https://piapicountries.herokuapp.com/countries");
     return dispatch({
       type: GETALLCOUNTRIES,
       payload: allCountries.data,
@@ -21,7 +21,7 @@ export const getCountries = () => {
 export const postActivity = (payload) => {
   return async (dispatch) => {
     const response = await axios.post(
-      "https://apipicountryv00.herokuapp.com/activity",
+      "https://piapicountries.herokuapp.com/activity",
       payload
     );
     return response.data;
@@ -31,7 +31,7 @@ export const postActivity = (payload) => {
 export const getCountryDetail = (payload) => {
   return async (dispatch) => {
     const response = await axios.get(
-      `https://apipicountryv00.herokuapp.com/countries/${payload}`
+      `https://piapicountries.herokuapp.com/countries/${payload}`
     );
     return   dispatch({
       type: GETCOUNTRYDETAIL,
@@ -42,7 +42,7 @@ export const getCountryDetail = (payload) => {
 
 export const getActivitiesList = () => {
   return async (dispatch) => {
-    const response = await axios.get("https://apipicountryv00.herokuapp.com/activity");
+    const response = await axios.get("https://piapicountries.herokuapp.com/activity");
     return dispatch({
       type: GETACTIVITIES,
       payload: response.data,
@@ -52,7 +52,7 @@ export const getActivitiesList = () => {
 
 export const getSeasonsList = () =>{
   return async (dispatch) => {
-    const response = await axios.get("https://apipicountryv00.herokuapp.com/seasons");
+    const response = await axios.get("https://piapicountries.herokuapp.com/seasons");
     console.log('actions get seasons list',response.data)
     return dispatch({
       type: GETSEASONS,
@@ -65,7 +65,7 @@ export const allFilters = (payload) => {
   if (payload.countrySearch !== "") {
     return async (dispatch) => {
       const response = await axios.get(
-        `https://apipicountryv00.herokuapp.com/countries?name=${payload.countrySearch}`
+        `https://piapicountries.herokuapp.com/countries?name=${payload.countrySearch}`
       );
       return dispatch({
         type: ALLFILTERS,
