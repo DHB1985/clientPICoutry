@@ -16,6 +16,30 @@
   }
 
   .landingPage h1{
-    color: white
+    color: blanchedalmond
+  }
+
+  .buttonLanding {
+    width: 100px;
+    height: 33px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background: white;
+    border: 2px solid black;
+    box-shadow: 5px 5px 0 rgb(4, 1, 184),
+      -5px -5px 0 rgb(4, 1, 184),
+      -5px 5px 0 rgb(4, 1, 184),
+      5px -5px 0 rgb(4, 1, 184);
+    transition: 500ms ease-in-out;
+  }
+  
+  .buttonLanding:hover {
+    box-shadow: 20px 5px 0 rgb(0, 194, 97), -20px -5px 0 rgb(0, 194, 97);
+  }
+  
+  .buttonLanding:focus {
+    outline: none;
   }
 }

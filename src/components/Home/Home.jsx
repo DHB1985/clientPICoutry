@@ -160,6 +160,13 @@ const Home = () => {
         </div>
 
         <div className={styles.filterActivity}>
+
+          <SeasonFilter
+            setCurrentPage={setCurrentPage}
+            setFilterState={setFilterState}
+            filterState={filterState}
+          />
+          
           {/* Filtrado por Actividad */}
 
           <ActivityFilter
@@ -168,11 +175,6 @@ const Home = () => {
             filterState={filterState}
           />
 
-          <SeasonFilter
-            setCurrentPage={setCurrentPage}
-            setFilterState={setFilterState}
-            filterState={filterState}
-          />
         </div>
       </div>
     </div>
