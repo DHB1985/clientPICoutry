@@ -23,7 +23,7 @@ const CountryDetail = () => {
   if (country !== "País no encontrado") {
     if (country.id !== id){
       return (
-        <div className={styles.countryDetailBox}>
+        <div className={styles.loading}>
       <img src={loadingIMG} alt="" />
       </div>
       )
