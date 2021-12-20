@@ -19,7 +19,7 @@
     color: blanchedalmond
   }
 
-  .buttonLanding {
+  /* .buttonLanding {
     width: 100px;
     height: 33px;
     cursor: pointer;
@@ -41,5 +41,61 @@
   
   .buttonLanding:focus {
     outline: none;
+  } */
+
+  .buttonLanding {
+    display: flex;
+    justify-content: center;
+        flex-shrink: 0;
+        width: 100px;
+        height: 33px;
+    position: relative;
+    padding: 1% 1%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    /* margin: 1em 0.8em; */
+  }
+  .buttonLanding.type3 {
+    color: blanchedalmond;
+  }
+  .buttonLanding.type3.type3::after,
+  .buttonLanding.type3.type3::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+  }
+  .buttonLanding.type3.type3::after {
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: blanchedalmond;
+    border-right-color: blanchedalmond;
+  }
+  .buttonLanding.type3.type3::before {
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: blanchedalmond;
+    border-left-color: blanchedalmond;
+  }
+  .buttonLanding.type3.type3:hover:after,
+  .buttonLanding.type3.type3:hover:before {
+    border-bottom-color: blanchedalmond;
+    border-right-color: blanchedalmond;
+    border-top-color: blanchedalmond;
+    border-left-color: blanchedalmond;
+    width: 100%;
+    height: 100%;
   }
 }

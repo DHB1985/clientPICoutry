@@ -8,7 +8,7 @@ const LandingPage = () => {
     <div className={styles.landingPage}>
       <h1>Bienvenidos</h1>
       <Link to="/home">
-        <button className={styles.buttonLanding}>Ingresar</button>
+        <button className={styles.buttonLanding+ " "+ styles.type3}>Ingresar</button>
       </Link>
     </div>
   );

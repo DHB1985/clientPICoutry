@@ -4,6 +4,23 @@
     align-items: center;
     justify-content: flex-start;
     flex-shrink: 0;
+    width: 98%;
+    height: 194%;  
+}
+
+.countryBtn{
+  border-radius: 10px;
+  background: linear-gradient(to top right, #00ffc8d2 30%,#018a83d2 100%, transparent);
+  
+  font-size:90%;
+}
+
+.inputBar{
+  border-radius: 10px;
+  height: 27px;
+  width: 120%;
+  
+  background: linear-gradient(to top right, #00ffc8d2 30%,#018a83d2 100%, transparent);
 }
 
 .countriesListBtn {
@@ -12,6 +29,8 @@
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
+  width: 120%;
+  height: 27px;
 }
 
 .countriesListBtn button{

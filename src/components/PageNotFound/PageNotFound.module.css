@@ -2,6 +2,7 @@
   .pageNotFound {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     height: 100vh;
     /* background-image: url("https://yt3.ggpht.com/ytc/AKedOLR-PeE-sjM2G3806Es3t_weZVsB5Cj6Iz_iryVd=s900-c-k-c0x00ffffff-no-rj"); */
@@ -14,5 +15,68 @@
     background-image: url("../../img/WhatsApp\ Image\ 2021-11-29\ at\ 21.44.13\ \(1\).jpeg");
      /* background: linear-gradient(0deg, #00000088 30%,#ffffff44 100%, transparent);   */
      color: white;
+  }
+  .pageNotFound span{
+    width: 500px;
+    color: blanchedalmond;
+    flex-shrink: 0;
+  font-size: 45px;
+  }
+  .buttonHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 200%;
+    height: 33px;
+    position: relative;
+    padding: 1% 1%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size:95%;
+    font-weight: bold;
+    /* margin: 1em 0.8em; */
+  }
+  
+  .buttonHome.type3 {
+    color: blanchedalmond;
+  }
+  .buttonHome.type3.type3::after,
+  .buttonHome.type3.type3::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+  }
+  .buttonHome.type3.type3::after {
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: blanchedalmond;
+    border-right-color: blanchedalmond;
+  }
+  .buttonHome.type3.type3::before {
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: blanchedalmond;
+    border-left-color: blanchedalmond;
+  }
+  .buttonHome.type3.type3:hover:after,
+  .buttonHome.type3.type3:hover:before {
+    border-bottom-color: blanchedalmond;
+    border-right-color: blanchedalmond;
+    border-top-color: blanchedalmond;
+    border-left-color: blanchedalmond;
+    width: 100%;
+    height: 100%;
   }
 }

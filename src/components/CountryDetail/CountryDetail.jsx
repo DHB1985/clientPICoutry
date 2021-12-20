@@ -32,7 +32,7 @@ const CountryDetail = () => {
       <div className={styles.countryDetailBox}>
         <div className={styles.countryDetailTitleBox}>
           <Link to="/home">
-            <button>HOME</button>
+            <button className={styles.buttonHome + " " + styles.type3}>HOME</button>
           </Link>
 
           <h1>{country.name}</h1>

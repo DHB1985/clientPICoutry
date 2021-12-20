@@ -10,7 +10,7 @@ return (
         <span>
             Error 404 Page not found
         </span>
-        <Link to="/home"><button>HOME</button></Link>
+        <Link to="/home"><button className={styles.buttonHome + " " + styles.type3}>HOME</button></Link>
     </div>
 )
 }

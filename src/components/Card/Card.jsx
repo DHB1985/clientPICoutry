@@ -12,7 +12,7 @@ const CountryCard = ({ imgflag, name, continent, population, id }) => {
         <img src={imgflag} alt="Not Found" className={styles.imgFlag} />
       </div>
       <div className={styles.dataContent}>
-          <label>{name}</label>
+          <label className={styles.countryName}>{name}</label>
         <div className={styles.cardInfo}>
           <label>Continente: {continent}</label> 
           {/* <label> </label>  */}

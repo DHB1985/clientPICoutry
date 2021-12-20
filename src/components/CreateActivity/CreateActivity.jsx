@@ -180,7 +180,9 @@ const CreateActivity = () => {
     <div className={styles.contentBox}>
       <div className={styles.activityTitleBox}>
         <Link to="/home">
-          <button>Volver</button>
+          <button className={styles.buttonHome + " " + styles.type3}>
+            Volver
+          </button>
         </Link>
         <h1>Crear Actividad</h1>
       </div>
@@ -201,6 +203,7 @@ const CreateActivity = () => {
                   value={input.name}
                   onChange={(e) => handleChangeIntegrated(e)}
                   placeholder="Ingrese el nombre..."
+                  className={styles.inputNameDur}
                 />
               </div>
               <div>
@@ -214,6 +217,7 @@ const CreateActivity = () => {
                   value={input.duration}
                   onChange={(e) => handleChangeIntegrated(e)}
                   placeholder="Ingrese la duración..."
+                  className={styles.inputNameDur}
                 />
               </div>
             </div>
@@ -222,22 +226,37 @@ const CreateActivity = () => {
 
             <SelectSeason handleCheckSeason={handleCheckSeason} />
           </form>
+
           <SearchCountryActivity
             handleSelectCountries={handleSelectCountries}
+            className={styles.searchBar}
           />
         </div>
         <div className={styles.activityFooter}>
           <div className={styles.errorsListBtn}>
             <ErrorsList errors={errors} />
 
-            <button
-              type="submit"
-              disabled={habilButton}
-              key="submitFormButton"
-              form="createActivity"
-            >
-              Crear Actividad
-            </button>
+            {habilButton ? (
+              <button
+                type="submit"
+                disabled={habilButton}
+                key="submitFormButton"
+                form="createActivity"
+                className={styles.habilitationBtn+ " " + styles.type3}
+              >
+                Crear Actividad
+              </button>
+            ) : (
+              <button
+                type="submit"
+                disabled={habilButton}
+                key="submitFormButton"
+                form="createActivity"
+                className={styles.buttonHome + " " + styles.type3}
+              >
+                Crear Actividad
+              </button>
+            )}
           </div>
           <div className={styles.countriesToAdd}>
             <label>Paises:</label>
@@ -254,13 +273,14 @@ const CreateActivity = () => {
                       width="15px"
                       height="15px"
                     />
-                    {element}
+                    <p>{element}</p>
                     <button
                       onClick={(event) => hanldeDeleteCountrie(event)}
                       key={element}
                       value={input.countries[index]}
                       id={element}
                       name={input.countriesFlags[index]}
+                      className={styles.deleteCountry}
                     >
                       x
                     </button>

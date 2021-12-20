@@ -36,6 +36,7 @@ const SearchCountryActivity = ({ handleSelectCountries }) => {
                 name={element.imgflag}
                 id={element.id}
                 key={element.id}
+                className={styles.countryBtn}
               >
                 <img
                   src={element.imgflag}
@@ -63,6 +64,7 @@ const SearchCountryActivity = ({ handleSelectCountries }) => {
           id='SearchInput'
           placeholder="Buscar países.."
           onChange={handleChange}
+          className={styles.inputBar}
         />
       {searchList()}
       </div>
