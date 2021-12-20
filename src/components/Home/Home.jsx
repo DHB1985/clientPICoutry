@@ -159,7 +159,7 @@ const Home = () => {
           />
         </div>
 
-        <div className={styles.filterActivity}>
+        <div className={styles.rightMenu}>
 
           <SeasonFilter
             setCurrentPage={setCurrentPage}
