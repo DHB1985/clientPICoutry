@@ -24,7 +24,7 @@ const CountryDetail = () => {
     if (country.id !== id){
       return (
         <div className={styles.countryDetailBox}>
-      <img src={loadingIMG} alt="" width = "20%" height = "20%"/>
+      <img src={loadingIMG} alt="" />
       </div>
       )
     } else {
