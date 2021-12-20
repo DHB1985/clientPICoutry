@@ -26,7 +26,7 @@ const SeasonFilter = ({ setCurrentPage, setFilterState, filterState }) => {
       <h4>Filtrado por Temporada</h4>
       <div className={styles.selectActivity}>
         <select onChange={(e) => handleFilterSeason(e)}>
-          <option key={"seasonFilter All"} value="All">
+          <option key={"seasonFilterAll"} value="All">
             All Countries
           </option>
           {allSeasons &&

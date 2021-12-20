@@ -18,12 +18,14 @@
   height: 30px;
 }
 .pageNav button:hover {
-  background-color: steelblue;
+  /* background-color: #4682b4; */
+  background: linear-gradient(0deg, #4682b4 30%,#70b4eb 100%, transparent);
 }
-.pageNav button:active {
+/* .pageNav button:active {
   background-color: green;
-}
+} */
 
 .btnPage{
-  background-color: red;
+  /* background-color: rgba(124, 252, 0, 0.5); */
+  background: linear-gradient(to top, #00fd00d2 30%,#85f5948c 100%, transparent);
 }

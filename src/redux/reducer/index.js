@@ -32,37 +32,45 @@ const rootReducer = (state = initialState, action) => {
 
     case ALLFILTERS:
       let countries =
-        action.payload.condition.countrySearch === ""
-          ? state.allCountries
-          : action.payload.response;
-
+      action.payload.condition.countrySearch === ""
+      ? state.allCountries
+      : action.payload.response;
+      
       if (action.payload.condition.continent.length !== 0) {
+        console.log('entre1')
         countries = filterByContinent(
           action.payload.condition.continent,
           countries
-        );
-      }
-      if (action.payload.condition.activity !== "All") {
-        countries = filterByActivity(
+          );
+        }
+        if (action.payload.condition.activity !== "All") {
+        console.log('entre2')
+
+          countries = filterByActivity(
           action.payload.condition.activity,
           countries
-        );
-      }
+          );
+        }
+        
+        if (action.payload.condition.season !== "All") {
+        console.log('entre3')
 
-      if (action.payload.condition.season !== "All") {
-        countries = filterBySeason(
-          action.payload.condition.season,
-          countries
-        );
-      }
+          countries = filterBySeason(
+            action.payload.condition.season,
+            countries
+            );
+          }
+          
+          if (action.payload.condition.sort !== "Orden") {
+        console.log('entre4')
 
-      if (action.payload.condition.sort !== "Orden") {
-        countries = sortedCountries(action.payload.condition.sort, countries);
-      }
-
-      return {
-        ...state,
-        countries: countries,
+            countries = sortedCountries(action.payload.condition.sort, countries);
+          }
+          console.log('filtro pais searchdddsds',countries )
+          
+          return {
+            ...state,
+            countries: countries,
       };
 
     case POSTACTIVITY:

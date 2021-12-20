@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./SearchBar.module.css"
 
 const SearchBar = ({ setCurrentPage, setFilterState, filterState }) => {
   const handleInputChange = (event) => {
@@ -8,11 +9,12 @@ const SearchBar = ({ setCurrentPage, setFilterState, filterState }) => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <input
         type="text"
         placeholder="Buscar País..."
         onChange={(event) => handleInputChange(event)}
+        className={styles.inputSearch}
       />
     </div>
   );

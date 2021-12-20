@@ -44,24 +44,26 @@ const ContinentFilter = ({ setCurrentPage, setFilterState, filterState }) => {
     <div className={styles.filterContinent}>
       {/* Filtrado por Continente */}
       <h4>Filtrado por continente</h4>
-      {continentsList.map((element, index) => {
-        return (
-          <div key={"div" + index}>
-            <label key={"label" + index}>
-              <input
-                key={"input" + index}
-                type="checkbox"
-                id={index}
-                name={element}
-                value={element}
-                checked={filterContinent[index]}
-                onChange={(e) => handleFilterContinent(e)}
-              />
-              {element}
-            </label>
-          </div>
-        );
-      })}
+      <div className={styles.continentsOptions}>
+        {continentsList.map((element, index) => {
+          return (
+            <div key={"div" + index}>
+              <label key={"label" + index}>
+                <input
+                  key={"input" + index}
+                  type="checkbox"
+                  id={index}
+                  name={element}
+                  value={element}
+                  checked={filterContinent[index]}
+                  onChange={(e) => handleFilterContinent(e)}
+                />
+                {element}
+              </label>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

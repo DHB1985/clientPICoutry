@@ -41,7 +41,7 @@ const Home = () => {
     sort: "Orden",
     activity: "All",
     countrySearch: "",
-    season: "",
+    season: "All"
   });
 
   useEffect(() => {
@@ -74,13 +74,12 @@ const Home = () => {
   //funcion loading
 
   const [loading, setLoading] = useState(false);
-  console.log("show ", show);
-  useEffect(() => {
+   useEffect(() => {
     setShow((show) => !show);
     if (loading) {
       setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 3000);
     }
   }, [loading]);
 
@@ -92,13 +91,14 @@ const Home = () => {
             onClick={(event) => {
               handleClick(event);
             }}
+            className={styles.button + " "+ styles.type3}
           >
             Volver a Cargar
           </button>
         </div>
 
         <div className={styles.titleH2}>
-          <h2>Welcome to Countrie App</h2>
+          <h2 style={{marginLeft:'56%'}}>Countries App</h2>
         </div>
         {/* SearchBar */}
         <div className={styles.searchCreateAct}>
@@ -109,7 +109,7 @@ const Home = () => {
           />
 
           <Link to="/activity">
-            <button>Crear actividad Turística</button>
+            <button  className={styles.button + " "+ styles.type3}>Crear actividad Turística</button>
           </Link>
         </div>
       </div>
