@@ -12,7 +12,6 @@ export const getCountries = () => {
   return async (dispatch) => {
     let allCountries = await axios.get(
       `${process.env.API_ENDPOINT}/countries`
-      // "https://piapicountries.herokuapp.com/countries"
     );
     return dispatch({
       type: GETALLCOUNTRIES,
