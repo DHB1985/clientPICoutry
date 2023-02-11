@@ -11,7 +11,7 @@ import {
 export const getCountries = () => {
   return async (dispatch) => {
     let allCountries = await axios.get(
-      "${process.env.API_ENDPOINT}/countries"
+      `${process.env.API_ENDPOINT}/countries`
       // "https://piapicountries.herokuapp.com/countries"
     );
     return dispatch({
@@ -24,7 +24,7 @@ export const getCountries = () => {
 export const postActivity = (payload) => {
   return async (dispatch) => {
     const response = await axios.post(
-      "${process.env.API_ENDPOINT}/activity",
+      `${process.env.API_ENDPOINT}/activity`,
       // "https://piapicountries.herokuapp.com/activity",
       payload
     );
@@ -48,7 +48,7 @@ export const getCountryDetail = (payload) => {
 export const getActivitiesList = () => {
   return async (dispatch) => {
     const response = await axios.get(
-      "${process.env.API_ENDPOINT}/activity"
+      `${process.env.API_ENDPOINT}/activity`
       // "https://piapicountries.herokuapp.com/activity"
     );
     return dispatch({
@@ -61,7 +61,7 @@ export const getActivitiesList = () => {
 export const getSeasonsList = () => {
   return async (dispatch) => {
     const response = await axios.get(
-      "${process.env.API_ENDPOINT}/seasons"
+      `${process.env.API_ENDPOINT}/seasons`
       // "https://piapicountries.herokuapp.com/seasons"
     );
     console.log("actions get seasons list", response.data);
