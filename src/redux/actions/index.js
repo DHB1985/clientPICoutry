@@ -11,7 +11,7 @@ import {
 export const getCountries = () => {
   return async (dispatch) => {
     let allCountries = await axios.get(
-      "https://web-production-579e.up.railway.app/countries"
+      "${process.env.API_ENDPOINT}/countries"
       // "https://piapicountries.herokuapp.com/countries"
     );
     return dispatch({
@@ -24,7 +24,7 @@ export const getCountries = () => {
 export const postActivity = (payload) => {
   return async (dispatch) => {
     const response = await axios.post(
-      "https://web-production-579e.up.railway.app/activity",
+      "${process.env.API_ENDPOINT}/activity",
       // "https://piapicountries.herokuapp.com/activity",
       payload
     );
@@ -35,7 +35,7 @@ export const postActivity = (payload) => {
 export const getCountryDetail = (payload) => {
   return async (dispatch) => {
     const response = await axios.get(
-      `https://web-production-579e.up.railway.app/countries/${payload}`
+      `${process.env.API_ENDPOINT}/countries/${payload}`
       // `https://piapicountries.herokuapp.com/countries/${payload}`
     );
     return dispatch({
@@ -48,7 +48,7 @@ export const getCountryDetail = (payload) => {
 export const getActivitiesList = () => {
   return async (dispatch) => {
     const response = await axios.get(
-      "https://web-production-579e.up.railway.app/activity"
+      "${process.env.API_ENDPOINT}/activity"
       // "https://piapicountries.herokuapp.com/activity"
     );
     return dispatch({
@@ -61,7 +61,7 @@ export const getActivitiesList = () => {
 export const getSeasonsList = () => {
   return async (dispatch) => {
     const response = await axios.get(
-      "https://web-production-579e.up.railway.app/seasons"
+      "${process.env.API_ENDPOINT}/seasons"
       // "https://piapicountries.herokuapp.com/seasons"
     );
     console.log("actions get seasons list", response.data);
@@ -76,7 +76,7 @@ export const allFilters = (payload) => {
   if (payload.countrySearch !== "") {
     return async (dispatch) => {
       const response = await axios.get(
-        `https://web-production-579e.up.railway.app/countries?name=${payload.countrySearch}`
+        `${process.env.API_ENDPOINT}/countries?name=${payload.countrySearch}`
         // `https://piapicountries.herokuapp.com/countries?name=${payload.countrySearch}`
       );
 
