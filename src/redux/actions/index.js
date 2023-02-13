@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const urlAPI = process.env.API_ENDPOINT;
+//const urlAPI = process.env.API_ENDPOINT;
 
 import {
   GETALLCOUNTRIES,
@@ -13,8 +13,8 @@ import {
 export const getCountries = () => {
   return async (dispatch) => {
     let allCountries = await axios.get(
-      //`https://web-production-579e.up.railway.app/countries`
-      `${urlAPI}/countries`
+      `https://web-production-579e.up.railway.app/countries`
+      //`${urlAPI}/countries`
       // "https://piapicountries.herokuapp.com/countries"
     );
     return dispatch({
@@ -27,8 +27,8 @@ export const getCountries = () => {
 export const postActivity = (payload) => {
   return async (dispatch) => {
     const response = await axios.post(
-      //`https://web-production-579e.up.railway.app/activity`,
-      `${urlAPI}/activity`,
+      `https://web-production-579e.up.railway.app/activity`,
+      //`${urlAPI}/activity`,
       // "https://piapicountries.herokuapp.com/activity",
       payload
     );
@@ -39,8 +39,8 @@ export const postActivity = (payload) => {
 export const getCountryDetail = (payload) => {
   return async (dispatch) => {
     const response = await axios.get(
-      //`https://web-production-579e.up.railway.app/countries/${payload}`
-      `${urlAPI}/countries/${payload}`
+      `https://web-production-579e.up.railway.app/countries/${payload}`
+      //`${urlAPI}/countries/${payload}`
       // `https://piapicountries.herokuapp.com/countries/${payload}`
     );
     return dispatch({
@@ -53,8 +53,8 @@ export const getCountryDetail = (payload) => {
 export const getActivitiesList = () => {
   return async (dispatch) => {
     const response = await axios.get(
-      //`https://web-production-579e.up.railway.app/activity`
-      `${urlAPI}/activity`
+      `https://web-production-579e.up.railway.app/activity`
+      //`${urlAPI}/activity`
       // "https://piapicountries.herokuapp.com/activity"
     );
     return dispatch({
@@ -67,8 +67,8 @@ export const getActivitiesList = () => {
 export const getSeasonsList = () => {
   return async (dispatch) => {
     const response = await axios.get(
-      //`https://web-production-579e.up.railway.app/seasons`
-      `${urlAPI}/seasons`
+      `https://web-production-579e.up.railway.app/seasons`
+      //`${urlAPI}/seasons`
       // "https://piapicountries.herokuapp.com/seasons"
     );
     console.log("actions get seasons list", response.data);
@@ -83,8 +83,8 @@ export const allFilters = (payload) => {
   if (payload.countrySearch !== "") {
     return async (dispatch) => {
       const response = await axios.get(
-        //`https://web-production-579e.up.railway.app/countries?name=${payload.countrySearch}`
-        `${urlAPI}/countries?name=${payload.countrySearch}`
+        `https://web-production-579e.up.railway.app/countries?name=${payload.countrySearch}`
+        //`${urlAPI}/countries?name=${payload.countrySearch}`
         // `https://piapicountries.herokuapp.com/countries?name=${payload.countrySearch}`
       );
 
