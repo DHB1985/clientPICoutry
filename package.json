@@ -8,7 +8,6 @@
     "@testing-library/user-event": "^12.2.2",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
     "axios": "^0.24.0",
-    "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
     "jest-junit": "^12.2.0",
     "react": "^17.0.1",
@@ -23,7 +22,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
